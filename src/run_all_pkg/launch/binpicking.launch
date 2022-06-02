@@ -1,0 +1,23 @@
+<launch>
+
+    <!-- Launch of Machine Learning node-->
+
+    <!-- Launch of  Point cloud node-->
+    <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+        <arg name="time" value="5" />
+        <arg name="pkg" value="point_cloud" />
+        <arg name="file" value="point_cloud.launch" />>
+      </include>
+
+    <!-- Launch of Plane creator node-->
+    <!--<node name="plane_creator" pkg="plane_creator" type="main.py" required="true" respawn="true" /> -->
+    
+    <!-- Launch of UR_controller node-->
+      <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+        <arg name="time" value="6" />
+        <arg name="pkg" value="ur_bringup" />
+        <arg name="file" value="ur5_bringup.launch" />>
+      </include>
+    <!-- Launch of Robot node-->
+
+</launch>

@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="plane_creator" type="main.py" name="plane_creator" output="screen"/>
+</launch>

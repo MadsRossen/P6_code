@@ -1,0 +1,3 @@
+<launch>
+    <node name="point_cloud_grabber" pkg="point_cloud" type="main.py" required="true"/>
+</launch>

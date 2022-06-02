@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="https://ros.org/wiki/xacro">
+  <!-- refrence: https://gramaziokohler.github.io/compas_fab/latest/examples/03_backends_ros/07_ros_create_urdf_ur5_with_measurement_tool.html
+    Here we define the 2 parameters of the macro -->
+  <xacro:macro name="tool" params="connected_to">
+    <!-- Create a fixed joint with a parameterized name. -->
+    <joint name="tool_joint" type="fixed">
+      <!-- The parent link must be read from the robot model it is attached to. -->
+      <parent link="${connected_to}"/>
+      <child link="tool"/>
+      <!-- Tool position in relation to mount -->
+      <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    </joint>
+    <link name="tool">
+      <visual>
+        <geometry>
+          <!-- The path to the collision meshes in the package. NOTE: mesh must be imported in metres, else
+          use the "scale" param to compensate-->
+          <mesh filename="package://ur_description/meshes//ur5/collision/StlGrip2.stl"
+          scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="b_and_r_color">
+          <color rgba="1 0 1 1"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <!-- The path to the collision meshes in the package. NOTE: mesh must be imported in metres, else
+          use the "scale" param to compensate-->
+          <mesh filename="package://ur_description/meshes/ur5/collision/StlGrip2.stl"
+          scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="collision">
+          <color rgba="1 0 1 1"/>
+        </material>
+      </collision>
+    </link>
+
+    <!-- TCP frame -->
+    <joint name="tcp_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0.1 0"/>
+      <!--${pi/2.0} ${-pi/2.0} ${pi/2.0}-->
+      <parent link="tool"/>
+      <child link="tcp"/>
+    </joint>
+
+    <link name="tcp"/>
+
+  </xacro:macro>
+</robot>

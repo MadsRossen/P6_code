@@ -1,0 +1,12 @@
+<launch>
+
+    <include file="$(find ur5_moveit_config_beumer)/launch/ur5_moveit_planning_execution.launch"/>
+    <!--<include file="$(find ur5_moveit_config_beumer)/launch/demo.launch"/>-->
+    <include file="$(find ur_robot_driver)/launch/example_rviz.launch"/>
+
+    <node pkg="tf" type="static_transform_publisher" name="camera" args="-0.085 0.52248 1.0271 0 3.14 0  base kinect2_rgb_optical_frame 100" />  
+    <node pkg="tf" type="static_transform_publisher" name="camera_ir" args="-0.03 0 0 0 0 0 1 kinect2_rgb_optical_frame kinect2_ir_optical_frame 100" />    
+
+    <node pkg="robot_prototype" type="main.py" name="robot_prototype" output="screen" launch-prefix="gnome-terminal --command"/>
+
+</launch>

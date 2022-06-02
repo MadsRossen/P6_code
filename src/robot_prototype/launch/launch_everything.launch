@@ -1,0 +1,7 @@
+<launch>
+    <!--<include file="$(find kinect2_bridge)/launch/kinect2_bridge.launch"/>-->
+    <include file="$(find plane_creator)/launch/plane_creator.launch"/>
+    <include file="$(find point_cloud)/launch/point_cloud.launch"/>
+    <include file="$(find robot_prototype)/launch/robot_prototype.launch"/>
+
+</launch>
