@@ -2,10 +2,10 @@
 
 
 ## Overview:
-[![License](https://img.shields.io/github/license/MadsRossen/P6_project)](https://github.com/MadsRossen/P6_project)
-[![Github code size](https://img.shields.io/github/languages/code-size/MadsRossen/P6_project)](https://github.com/MadsRossen/P6_project)
-[![Github issue tracker](https://img.shields.io/github/issues/MadsRossen/P6_project)](https://github.com/MadsRossen/P6_project)
-[![Commit activity](https://img.shields.io/github/commit-activity/w/MadsRossen/P6_project)](https://github.com/MadsRossen/P6_project)
+[![License](https://img.shields.io/github/license/MadsRossen/P6_code)](https://github.com/MadsRossen/P6_code)
+[![Github code size](https://img.shields.io/github/languages/code-size/MadsRossen/P6_code)](https://github.com/MadsRossen/P6_code)
+[![Github issue tracker](https://img.shields.io/github/issues/MadsRossen/P6_code)](https://github.com/MadsRossen/P6_project)
+[![Commit activity](https://img.shields.io/github/commit-activity/w/MadsRossen/P6_code)](https://github.com/MadsRossen/P6_code)
 
 ## Table of content
 [Where to find things](#where-to-find-things)<br/>
@@ -21,10 +21,10 @@
 
 ## Where to find things:
 ### ROS config
-[joint_limits](https://github.com/MadsRossen/P6_project/blob/main/src/fmauch_universal_robot/ur_description/config/ur5/joint_limits.yaml)<br/>
-[tool_urdf](https://github.com/MadsRossen/P6_project/blob/main/src/fmauch_universal_robot/ur_description/urdf/inc/tool.xacro)<br/>
-[ur5_w_tool_urdf](https://github.com/MadsRossen/P6_project/blob/main/src/fmauch_universal_robot/ur_description/urdf/ur5_robot_w_tool.urdf.xacro)<br/>
-[meshes](https://github.com/MadsRossen/P6_project/tree/main/src/fmauch_universal_robot/ur_description/meshes/ur5)<br/>
+[joint_limits](https://github.com/MadsRossen/P6_code/blob/main/src/fmauch_universal_robot/ur_description/config/ur5/joint_limits.yaml)<br/>
+[tool_urdf](https://github.com/MadsRossen/P6_code/blob/main/src/fmauch_universal_robot/ur_description/urdf/inc/tool.xacro)<br/>
+[ur5_w_tool_urdf](https://github.com/MadsRossen/P6_code/blob/main/src/fmauch_universal_robot/ur_description/urdf/ur5_robot_w_tool.urdf.xacro)<br/>
+[meshes](https://github.com/MadsRossen/P6_code/tree/main/src/fmauch_universal_robot/ur_description/meshes/ur5)<br/>
 ### Launch files
 Launch setup assistant
 ```bash
@@ -40,9 +40,9 @@ roslaunch ur_robot_driver example_rviz.launch
 ```
 
 ### Image data
-[Training](https://github.com/MadsRossen/P6_project/tree/main/images_of_parcels/training)<br/>
-[Validation](https://github.com/MadsRossen/P6_project/tree/main/images_of_parcels/validation)<br/>
-[Test](https://github.com/MadsRossen/P6_project/tree/main/images_of_parcels/test)<br/>
+[Training](https://github.com/MadsRossen/P6_code/tree/main/images_of_parcels/training)<br/>
+[Validation](https://github.com/MadsRossen/P6_code/tree/main/images_of_parcels/validation)<br/>
+[Test](https://github.com/MadsRossen/P6_code/tree/main/images_of_parcels/test)<br/>
 ## Issues
 
 ```$ catkin_make``` does not work, use ```$ catkin_make_isolated``` insted
